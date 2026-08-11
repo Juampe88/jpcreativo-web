@@ -31,6 +31,17 @@ jobs:
       - name: Build project
         run: npx vinext build
 
+      - name: Ensure fallback HTML for GitHub Pages
+        run: |
+          cd dist/client
+          if [ -f "index.html" ]; then
+            cp index.html 404.html
+          elif [ -f "app.html" ]; then
+            cp app.html index.html
+            cp app.html 404.html
+          fi
+          touch .nojekyll
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
