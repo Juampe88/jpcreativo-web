@@ -31,18 +31,26 @@ jobs:
       - name: Build and static export
         run: |
           npx vinext build
-          if [ -d "build" ]; then
-            echo "Usando carpeta build existente"
-          else
-            mkdir -p build
-            cp -r dist/client/* build/ || true
+          mkdir -p build
+          
+          # Copiar todo lo generado en client a build
+          if [ -d "dist/client" ]; then
+            cp -r dist/client/* build/
           fi
+          
+          # Desactivar procesamiento de Jekyll
           touch build/.nojekyll
           
-          # Si no existe index.html en la raiz, creamos un fallback para la app
-          if [ ! -f "build/index.html" ]; then
-            find build -name "*.html" -exec cp {} build/index.html \; -quit || true
+          # Buscar el primer HTML disponible para usarlo como index.html y 404.html
+          FIRST_HTML=$(find build -name "*.html" | head -n 1)
+          if [ -n "$FIRST_HTML" ]; then
+            cp "$FIRST_HTML" build/index.html
+            cp "$FIRST_HTML" build/404.html
+            echo "Se uso como entrada: $FIRST_HTML"
           fi
+          
+          echo "Contenido final de la carpeta build:"
+          ls -la build
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
