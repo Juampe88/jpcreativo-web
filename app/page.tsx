@@ -7,76 +7,76 @@ const projects = [
     name: "Sr. Pancho Gourmet",
     kind: "Identidad integral",
     categories: ["Identidad", "Packaging", "Espacios"],
-    detail: "Marca, packaging y experiencia gastronómica",
+    detail: "Marca, packaging y experiencia gastronÃ³mica",
     visual: "srpancho",
     number: "01",
     href: "/proyectos/sr-pancho-gourmet",
   },
   {
-    name: "La Angélica",
+    name: "La AngÃ©lica",
     kind: "Identidad",
     categories: ["Identidad", "Espacios"],
-    detail: "Hospitalidad rural · Entre Ríos",
+    detail: "Hospitalidad rural Â· Entre RÃ­os",
     visual: "rural",
     number: "02",
     href: "/proyectos/la-angelica",
   },
   {
-    name: "Colonia Ayuí",
+    name: "Colonia AyuÃ­",
     kind: "Identidad institucional",
-    categories: ["Identidad", "Campaña", "Espacios"],
-    detail: "Sistema público · Territorio y comunidad",
+    categories: ["Identidad", "CampaÃ±a", "Espacios"],
+    detail: "Sistema pÃºblico Â· Territorio y comunidad",
     visual: "ayui",
     number: "03",
     href: "/proyectos/colonia-ayui",
   },
   {
-    name: "Antártida",
+    name: "AntÃ¡rtida",
     kind: "Identidad integral",
     categories: ["Identidad", "Packaging"],
-    detail: "Helados artesanales · Una historia familiar desde 1960",
+    detail: "Helados artesanales Â· Una historia familiar desde 1960",
     visual: "antartida",
     number: "04",
     href: "/proyectos/antartida",
   },
   {
     name: "Pablito Viajero",
-    kind: "Diseño editorial",
+    kind: "DiseÃ±o editorial",
     categories: ["Editorial"],
-    detail: "Libros de viaje · Diseño, maquetación y preprensa",
+    detail: "Libros de viaje Â· DiseÃ±o, maquetaciÃ³n y preprensa",
     visual: "editorial",
     number: "05",
     href: "/proyectos/pablito-viajero",
   },
   {
-    name: "Cartelería & espacios",
-    kind: "Producción integral",
+    name: "CartelerÃ­a & espacios",
+    kind: "ProducciÃ³n integral",
     categories: ["Espacios"],
-    detail: "Corpóreos, señalética, gráfica aplicada e instalación",
+    detail: "CorpÃ³reos, seÃ±alÃ©tica, grÃ¡fica aplicada e instalaciÃ³n",
     visual: "cartelar",
     number: "06",
     href: "/proyectos/carteleria-espacios",
   },
 ];
 
-const filters = ["Todos", "Identidad", "Packaging", "Editorial", "Campaña", "Espacios"];
+const filters = ["Todos", "Identidad", "Packaging", "Editorial", "CampaÃ±a", "Espacios"];
 
 const clientLogoData = [
-  ["Vaca Tuerta", 1], ["Tecnomix", 2], ["Swimming", 3], ["Girirí", 4],
+  ["Vaca Tuerta", 1], ["Tecnomix", 2], ["Swimming", 3], ["GirirÃ­", 4],
   ["Sinergia", 5], ["Schattenhofer", 7], ["Cartelar", 8], ["Remsa", 9],
   ["Playmotur", 10], ["Pasta Rica", 11], ["Kaizen", 12],
   ["MH Estudio Inmobiliario", 13], ["Mercado Plaza", 14], ["Marilyn Shop", 15],
-  ["Maranhão", 16], ["Manojo Market", 17], ["Lubricentro Zorraquín", 18],
+  ["MaranhÃ£o", 16], ["Manojo Market", 17], ["Lubricentro ZorraquÃ­n", 18],
   ["Letroye Parabrisas", 19], ["Las Lilas", 20], ["LH La Hacienda", 21],
   ["Keto Prep", 22], ["Integral Service", 23], ["Il Forno", 24], ["Gromet", 25],
   ["Florentina", 26], ["Flo", 27], ["Humbral", 28], ["Farneda", 29],
   ["Schen Berger", 30], ["EUP", 31], ["Energy Sound", 32],
-  ["En sus marcas", 33], ["El Galpón", 34], ["Dinar", 35],
-  ["Compañía de Vinos", 36], ["GrünBauch", 37], ["Efecé Distribuciones", 38],
-  ["Yrigoyen Centro Médico", 39], ["Casa Rubén", 40],
-  ["Cabaña La Florencia", 41], ["Burnit", 42], ["BNZ", 43],
-  ["Ayuí Industriales", 44], ["Aranda", 45], ["Amaoto", 46],
-  ["Alexis Guichón", 47], ["Agroinga", 48], ["Club 9 de Julio", 49],
+  ["En sus marcas", 33], ["El GalpÃ³n", 34], ["Dinar", 35],
+  ["CompaÃ±Ã­a de Vinos", 36], ["GrÃ¼nBauch", 37], ["EfecÃ© Distribuciones", 38],
+  ["Yrigoyen Centro MÃ©dico", 39], ["Casa RubÃ©n", 40],
+  ["CabaÃ±a La Florencia", 41], ["Burnit", 42], ["BNZ", 43],
+  ["AyuÃ­ Industriales", 44], ["Aranda", 45], ["Amaoto", 46],
+  ["Alexis GuichÃ³n", 47], ["Agroinga", 48], ["Club 9 de Julio", 49],
 ] as const;
 
 const clientLogos = clientLogoData.map(([name, number]) => {
@@ -184,7 +184,7 @@ export default function Home() {
     const email = String(data.get("email") || "");
     const project = String(data.get("project") || "Nuevo proyecto");
     const message = String(data.get("message") || "");
-    const subject = `Consulta web · ${project}`;
+    const subject = `Consulta web Â· ${project}`;
     const body = [
       `Hola Juampe, soy ${name}.`,
       "",
@@ -208,21 +208,21 @@ export default function Home() {
           />
         </a>
 
-        <nav className="main-nav" aria-label="Navegación principal">
+        <nav className="main-nav" aria-label="NavegaciÃ³n principal">
           <a href="#estudio">Estudio</a>
           <a href="#portfolio">Portfolio</a>
           <a href="#servicios">Servicios</a>
         </nav>
 
         <a className="header-cta" href="#contacto">
-          Hablemos <span aria-hidden="true">↗</span>
+          Hablemos <span aria-hidden="true">â†—</span>
         </a>
       </header>
 
       <section className="hero" id="inicio">
         <div className="hero-copy">
           <p className="eyebrow">
-            <span /> Estudio de diseño gráfico · Concordia, ER
+            <span /> Estudio de diseÃ±o grÃ¡fico Â· Concordia, ER
           </p>
           <h1>
             Ideas que se
@@ -230,24 +230,24 @@ export default function Home() {
           </h1>
           <div className="hero-bottom">
             <p>
-              Identidad, comunicación y piezas que le dan forma a proyectos
+              Identidad, comunicaciÃ³n y piezas que le dan forma a proyectos
               con personalidad.
             </p>
             <a className="circle-link" href="#portfolio" aria-label="Proyectos">
               <span>Proyectos</span>
-              <b aria-hidden="true">↓</b>
+              <b aria-hidden="true">â†“</b>
             </a>
           </div>
         </div>
 
-        <div className="hero-art" aria-label="Selección gráfica de trabajos de Jotape Creativo">
+        <div className="hero-art" aria-label="SelecciÃ³n grÃ¡fica de trabajos de Jotape Creativo">
   <div className="art-grid" aria-hidden="true">
     <div className="art-card art-card--blue">
       <span className="art-number">01</span>
       <img className="art-card__responsive-logo" src="/brand/logo-compact-white.svg" alt="" />
       <div className="art-card__copy">
         <strong>Marca</strong>
-        <i>con carácter</i>
+        <i>con carÃ¡cter</i>
       </div>
     </div>
             <div className="art-card art-card--light">
@@ -257,12 +257,12 @@ export default function Home() {
               </div>
             </div>
             <div className="art-card art-card--dark">
-              <span className="art-label">Diseño que funciona</span>
+              <span className="art-label">DiseÃ±o que funciona</span>
               <div className="type-stack">FORMA<br /><em>+</em> IDEA</div>
             </div>
           </div>
           <div className="art-caption">
-            <span>Branding</span><span>Editorial</span><span>Campañas</span>
+            <span>Branding</span><span>Editorial</span><span>CampaÃ±as</span>
           </div>
         </div>
       </section>
@@ -270,10 +270,10 @@ export default function Home() {
       <section className="portfolio-section" id="portfolio">
         <div className="section-heading">
           <p className="section-kicker">Proyectos seleccionados</p>
-          <h2>Trabajo que habla<br /><em>por sí solo.</em></h2>
+          <h2>Trabajo que habla<br /><em>por sÃ­ solo.</em></h2>
           <p className="section-intro">
-            Una selección inicial de identidades, campañas y experiencias
-            desarrolladas para marcas de la región.
+            Una selecciÃ³n inicial de identidades, campaÃ±as y experiencias
+            desarrolladas para marcas de la regiÃ³n.
           </p>
         </div>
 
@@ -310,18 +310,18 @@ export default function Home() {
                     <img className="rural-card-photo" src="/projects/la-angelica/hero.webp" alt="" />
                     <span className="rural-card-shade" />
                     <img className="rural-card-logo" src="/projects/la-angelica/logo.svg" alt="" />
-                    <span className="rural-card-label">Identidad con raíces</span>
+                    <span className="rural-card-label">Identidad con raÃ­ces</span>
                   </>
                 )}
                 {project.visual === "antartida" && (
                   <>
                     <img
                       className="antartida-card-photo"
-                      src="/projects/antartida/cup.webp"
+                      src="/projects/antartida/sign.webp"
                       alt=""
                     />
                     <span className="antartida-card-shade" />
-                    <span className="antartida-card-label">Receta original · 1960</span>
+                    <span className="antartida-card-label">Receta original Â· 1960</span>
                   </>
                 )}
                 {project.visual === "ayui" && (
@@ -336,7 +336,7 @@ export default function Home() {
                   <>
                     <img className="cartelar-card-photo" src="/projects/carteleria/hero.webp" alt="" />
                     <span className="cartelar-card-shade" />
-                    <span className="cartelar-card-label">Del diseño al espacio</span>
+                    <span className="cartelar-card-label">Del diseÃ±o al espacio</span>
                     <span className="cartelar-word">HACER<br />VISIBLE</span>
                   </>
                 )}
@@ -344,7 +344,7 @@ export default function Home() {
                   <>
                     <img className="editorial-card-photo" src="/projects/editorial/book-scene.webp" alt="" />
                     <span className="editorial-card-shade" />
-                    <span className="editorial-card-label">Diseño editorial · desde el km 0</span>
+                    <span className="editorial-card-label">DiseÃ±o editorial Â· desde el km 0</span>
                     <span className="editorial-card-word">HISTORIAS<br /><em>QUE VIAJAN</em></span>
                   </>
                 )}
@@ -354,7 +354,7 @@ export default function Home() {
                 <h3>{project.name}</h3>
                 <span>{project.kind}</span>
                 <p>{project.detail}</p>
-                {project.href && <b className="project-open" aria-hidden="true">Ver caso ↗</b>}
+                {project.href && <b className="project-open" aria-hidden="true">Ver caso â†—</b>}
               </div>
             </article>
           ))}
@@ -369,65 +369,65 @@ export default function Home() {
             <em> lo que son.</em>
           </h2>
           <p>
-            Proyectos grandes, pequeños, públicos y privados. Distintas escalas,
-            una misma forma de acompañar.
+            Proyectos grandes, pequeÃ±os, pÃºblicos y privados. Distintas escalas,
+            una misma forma de acompaÃ±ar.
           </p>
         </div>
 
-        <div className="clients-marquee" aria-label="Selección de clientes de Jotape Creativo">
+        <div className="clients-marquee" aria-label="SelecciÃ³n de clientes de Jotape Creativo">
           <LogoMarqueeRow logos={clientLogos.slice(0, 24)} />
           <LogoMarqueeRow logos={clientLogos.slice(24)} reverse offset={24} />
         </div>
 
         <p className="clients-note">
-          Arrastrá con el mouse o con el dedo · Acercá el cursor para recuperar el color original.
+          ArrastrÃ¡ con el mouse o con el dedo Â· AcercÃ¡ el cursor para recuperar el color original.
         </p>
       </section>
 
       <section className="studio-section" id="estudio">
         <div className="studio-intro">
           <p className="section-kicker section-kicker--light">Jotape por dentro</p>
-          <h2>Diseño cercano.<br /><em>Criterio profesional.</em></h2>
+          <h2>DiseÃ±o cercano.<br /><em>Criterio profesional.</em></h2>
           <div className="studio-copy">
             <p>
-              Jotape Creativo es un estudio independiente que acompaña a cada
+              Jotape Creativo es un estudio independiente que acompaÃ±a a cada
               cliente desde la idea hasta la pieza terminada.
             </p>
             <p>
-              Escuchamos, pensamos y diseñamos sistemas visuales listos para
+              Escuchamos, pensamos y diseÃ±amos sistemas visuales listos para
               vivir en el mundo real: desde una marca hasta un cartel, una carta
-              o una campaña completa.
+              o una campaÃ±a completa.
             </p>
           </div>
         </div>
 
         <div className="services" id="servicios">
-          <p className="section-kicker section-kicker--light">Qué hacemos</p>
+          <p className="section-kicker section-kicker--light">QuÃ© hacemos</p>
           <div className="service-list">
-            <article><span>01</span><h3>Identidad de marca</h3><p>Concepto, logo, sistema visual y guía de uso.</p></article>
-            <article><span>02</span><h3>Comunicación</h3><p>Campañas, redes, piezas editoriales y contenido.</p></article>
-            <article><span>03</span><h3>Espacios & soporte</h3><p>Cartelería, señalética, packaging y aplicaciones.</p></article>
-            <article><span>04</span><h3>Dirección creativa</h3><p>Una mirada integral para proyectos que quieren crecer.</p></article>
+            <article><span>01</span><h3>Identidad de marca</h3><p>Concepto, logo, sistema visual y guÃ­a de uso.</p></article>
+            <article><span>02</span><h3>ComunicaciÃ³n</h3><p>CampaÃ±as, redes, piezas editoriales y contenido.</p></article>
+            <article><span>03</span><h3>Espacios & soporte</h3><p>CartelerÃ­a, seÃ±alÃ©tica, packaging y aplicaciones.</p></article>
+            <article><span>04</span><h3>DirecciÃ³n creativa</h3><p>Una mirada integral para proyectos que quieren crecer.</p></article>
           </div>
         </div>
 
         <div className="contact-panel" id="contacto">
           <div className="contact-copy">
             <p className="section-kicker">Contacto</p>
-            <h2>¿Tenés un proyecto<br /><em>en mente?</em></h2>
-            <p>Contame un poco. Arrancamos con una charla simple y vemos cómo darle forma.</p>
+            <h2>Â¿TenÃ©s un proyecto<br /><em>en mente?</em></h2>
+            <p>Contame un poco. Arrancamos con una charla simple y vemos cÃ³mo darle forma.</p>
             <div className="contact-channels" aria-label="Canales de contacto">
               <a href="https://www.instagram.com/jotape.creativo/" target="_blank" rel="noreferrer">
                 <span>Instagram</span>
-                <strong>@jotape.creativo ↗</strong>
+                <strong>@jotape.creativo â†—</strong>
               </a>
               <a href="https://wa.me/5493412123601?text=Hola%20Juampe%2C%20vi%20tu%20portfolio%20y%20quiero%20contarte%20un%20proyecto." target="_blank" rel="noreferrer">
                 <span>WhatsApp</span>
-                <strong>+54 9 341 2 123601 ↗</strong>
+                <strong>+54 9 341 2 123601 â†—</strong>
               </a>
               <a href="mailto:juanpedrocarbonara@gmail.com">
                 <span>Email</span>
-                <strong>juanpedrocarbonara@gmail.com ↗</strong>
+                <strong>juanpedrocarbonara@gmail.com â†—</strong>
               </a>
             </div>
           </div>
@@ -435,7 +435,7 @@ export default function Home() {
           <form className="contact-form" onSubmit={handleSubmit}>
             <label>
               <span>Nombre</span>
-              <input name="name" type="text" placeholder="¿Cómo te llamás?" required />
+              <input name="name" type="text" placeholder="Â¿CÃ³mo te llamÃ¡s?" required />
             </label>
             <label>
               <span>Email</span>
@@ -444,23 +444,23 @@ export default function Home() {
             <label>
               <span>Proyecto</span>
               <select name="project" defaultValue="">
-                <option value="" disabled>¿Qué necesitás?</option>
+                <option value="" disabled>Â¿QuÃ© necesitÃ¡s?</option>
                 <option>Identidad de marca</option>
-                <option>Campaña o comunicación</option>
-                <option>Cartelería o espacio</option>
+                <option>CampaÃ±a o comunicaciÃ³n</option>
+                <option>CartelerÃ­a o espacio</option>
                 <option>Otro proyecto</option>
               </select>
             </label>
             <label>
               <span>Mensaje</span>
-              <textarea name="message" placeholder="Contame la idea, el momento del proyecto y qué te gustaría lograr." required />
+              <textarea name="message" placeholder="Contame la idea, el momento del proyecto y quÃ© te gustarÃ­a lograr." required />
             </label>
             <button className="submit-button" type="submit">
-              Enviar consulta <span aria-hidden="true">↗</span>
+              Enviar consulta <span aria-hidden="true">â†—</span>
             </button>
             {sent && (
               <p className="form-note" role="status">
-                Abrimos tu aplicación de correo con el mensaje listo para enviar.
+                Abrimos tu aplicaciÃ³n de correo con el mensaje listo para enviar.
               </p>
             )}
           </form>
@@ -474,13 +474,13 @@ export default function Home() {
               alt="Jotape Creativo"
             />
           </a>
-          <p>Diseño gráfico · Concordia, Entre Ríos</p>
+          <p>DiseÃ±o grÃ¡fico Â· Concordia, Entre RÃ­os</p>
           <div className="footer-links">
             <a href="https://www.instagram.com/jotape.creativo/" target="_blank" rel="noreferrer">Instagram</a>
             <a href="mailto:juanpedrocarbonara@gmail.com">Email</a>
             <a href="https://wa.me/5493412123601" target="_blank" rel="noreferrer">WhatsApp</a>
           </div>
-          <a href="#inicio">Volver arriba ↑</a>
+          <a href="#inicio">Volver arriba â†‘</a>
         </footer>
       </section>
     </main>
