@@ -28,19 +28,21 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Build project
-        run: npx vinext build
-
-      - name: Ensure fallback HTML for GitHub Pages
+      - name: Build and static export
         run: |
-          cd dist/client
-          if [ -f "index.html" ]; then
-            cp index.html 404.html
-          elif [ -f "app.html" ]; then
-            cp app.html index.html
-            cp app.html 404.html
+          npx vinext build
+          if [ -d "build" ]; then
+            echo "Usando carpeta build existente"
+          else
+            mkdir -p build
+            cp -r dist/client/* build/ || true
           fi
-          touch .nojekyll
+          touch build/.nojekyll
+          
+          # Si no existe index.html en la raiz, creamos un fallback para la app
+          if [ ! -f "build/index.html" ]; then
+            find build -name "*.html" -exec cp {} build/index.html \; -quit || true
+          fi
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
@@ -48,7 +50,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './dist/client'
+          path: './build'
 
       - name: Deploy to GitHub Pages
         id: deployment
